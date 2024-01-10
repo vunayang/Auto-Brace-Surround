@@ -1,0 +1,61 @@
+﻿@* Test #1: Single Select
+
+1.	Select the following text.
+2.	Type the brace specified in the comment on each line.
+3.	Verify the following are true:
+  a.	The text is maintained as the selection.
+  b.	The brace typed surrounds the selection.
+  c.	The caret is positioned at the end of the selection.
+4.	Verify that undo operation reverts the auto surround. *@
+
+Text @* ( *@
+Text @* [ *@
+Text @* { *@
+Text @* " *@
+Text @* < *@
+
+@* Test #2: Multi-Select
+
+1.	Multi-Select the text on each line.
+2.	Type “[“
+3.	Verify the following is true:
+  a.	The selection is maintained for each line.
+  b.	The brace surrounds each selection.
+  c.	The caret position is maintained for each line. *@
+
+Text
+Text
+Text
+Text
+
+@* Test #3: Empty Selection
+
+1.	Type a space.
+2.	Select the space.
+3.	Type “(“
+4.	Verify the following is true:
+  a.	The selection is not maintained.
+  b.	A single “(“ is typed
+  c.	The caret is positioned after the brace. *@
+
+
+@* Test #4: Multi-Select with All Empty Spaces
+
+1.	Type 6 spaces
+2.	Select 3 separate spaces (Hold Ctrl+Alt+Click and drag will multi-select)
+3.	Type “(“
+4.	Verify the following is true:
+  a.	“(“ replaced each selection
+  b.	The caret position follows the typed brace.*@
+        
+
+@* Test #5: Multi-Select with a Single Empty Selection
+
+1.	Select the text below and select one whitespace (Hold Ctrl+Alt+Click and drag will multi-select)
+2.	Type “{“
+3.	Verify the following is true:
+  a.	The text is maintained as the selection.
+  b.	The brace typed surrounds the selection.
+  c.	The caret is now positioned at the end of the selection. *@
+
+text      
